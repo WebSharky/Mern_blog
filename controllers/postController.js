@@ -30,10 +30,6 @@ export const getPostsByUser = async ( req, res ) => {
 
 
 
-
-// @desc create post
-// @route POST /api/posts
-// @access Private
 export const createPost = async ( req, res) => {
     const { title, text, author, image} = req.body
     if (!title | !text | !author | !image) {
@@ -54,9 +50,7 @@ export const createPost = async ( req, res) => {
    
 }
 
-// @desc update post
-// @route PUT /api/posts/:id
-// @access Private
+
 export const updatePost = async ( req, res) => {
     const {id} = req.params
     try {
